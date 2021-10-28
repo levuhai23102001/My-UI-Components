@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glassmorphism Card Hover Effects</title>
+    <link rel="stylesheet" href="/css/glassCard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="card-view">
+            <img src="/img/719_f2.png" alt="719.png" class="card-view-img" />
+            <div class="card-title">
+              <h2>Mega Diancie</h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="attr">
+              <span class="attr-name">Rock</span>
+              <span class="attr-name">Fairy</span>
+            </div>
+            <a href="#" class="btn btn-primary">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-view">
+            <img src="/img/803.png" alt="719.png" class="card-view-img" />
+            <div class="card-title">
+              <h2>Poipole</h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="attr">
+              <span class="attr-name">Poision</span>
+            </div>
+            <a href="#" class="btn btn-primary">View More</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-view">
+            <img src="/img/800.png" alt="719.png" class="card-view-img" />
+            <div class="card-title">
+              <h2>Necrozma</h2>
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="attr">
+              <span class="attr-name">Psychic</span>
+            </div>
+            <a href="#" class="btn btn-primary">View More</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- View 3D -->
+    <script src="/js/vanilla-tilt.min.js"></script>
+    <script type="text/javascript">
+      VanillaTilt.init(document.querySelectorAll(".card"), {
+        max: 25,
+        speed: 400,
+        // glare: true,
+        // "max-glare": 1,
+      });
+    </script>
+  </body>
+</html>

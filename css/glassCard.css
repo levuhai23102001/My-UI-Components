@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffcfdf;
+  background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 20px 40px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.26);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+}
+.container .card .card-view {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  transition: 0.5s ease-in-out;
+}
+
+.container .card:hover .card-view {
+  transform: translateY(-100px);
+}
+
+.container .card .card-view .card-view-img {
+  width: 100%;
+}
+
+.container .card .card-view .card-title {
+  color: #ff3377;
+  text-transform: uppercase;
+}
+
+.container .card .card-content {
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.container .card .card-content .attr {
+  position: relative;
+  bottom: 20px;
+}
+
+.container .card .card-content .attr .attr-name {
+  color: #ff3377;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.26);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.container .card .card-content .btn {
+  position: relative;
+  top: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.26);
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.container .card .card-content .btn-primary {
+  text-decoration: none;
+  letter-spacing: 1px;
+  color: #ff3377;
+}
+
+.container .card:hover .card-content {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-30px);
+}

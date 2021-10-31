@@ -1,0 +1,218 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size-body: 16px;
+  --fav-color: #ff3377;
+  --font-color: whitesmoke;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-body);
+  min-height: 100vh;
+  background-color: #ffcfdf;
+  background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+  overflow: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sideNav {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  max-height: 100%;
+  width: 78px;
+  background: black;
+  padding: 10px 15px;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav.active {
+  width: 240px;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav .sideNav-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sideNav .sideNav-header .navbar-brand {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  color: var(--font-color);
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav.active .sideNav-header .navbar-brand {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav-header .navbar-brand i {
+  font-size: 28px;
+  margin-right: 6px;
+}
+
+.sideNav-header .navbar-brand .navbar-brand__name {
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.sideNav .sideNav-header .menu-btn {
+  position: absolute;
+  height: 50px;
+  width: 50px;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sideNav .sideNav-header .menu-btn i {
+  color: var(--font-color);
+  font-size: 24px;
+}
+
+.sideNav .sideNav-content {
+  margin: 20px 0;
+}
+
+.sideNav .sideNav-content ul li {
+  position: relative;
+  height: 50px;
+  width: 100%;
+  line-height: 50px;
+  margin: 5px 0;
+}
+
+.sideNav .sideNav-content ul li a {
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav .sideNav-content ul .navbar-list-item.active a {
+  background: whitesmoke;
+  color: black;
+}
+
+/* .sideNav .sideNav-content ul li:hover a {
+  background: whitesmoke;
+  color: black;
+  transition: 0.3s ease-in-out;
+} */
+
+.sideNav .sideNav-content ul li a i {
+  height: 50px;
+  min-width: 50px;
+  line-height: 50px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.sideNav
+  .sideNav-content
+  .navbar-list
+  .navbar-list-item
+  .list-item__link
+  .link-name {
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav.active
+  .sideNav-content
+  .navbar-list
+  .navbar-list-item
+  .list-item__link
+  .link-name {
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  pointer-events: auto;
+}
+
+.sideNav .sideNav-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15px;
+  color: var(--font-color);
+  width: 100%;
+}
+
+.sideNav .sideNav-footer .profile {
+  position: relative;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  line-height: 45px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav .sideNav-footer .profile .profile-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.profile .profile-content img {
+  height: 45px;
+  width: 45px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.profile .profile-content .profile-name {
+  margin-left: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  opacity: 0;
+}
+
+.profile .logout-btn {
+  position: absolute;
+  height: 50px;
+  top: 0;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.sideNav.active .profile .profile-content .profile-name,
+.sideNav.active .profile .logout-btn {
+  opacity: 1;
+}
+.sideNav-footer:hover .profile {
+  background: whitesmoke;
+  color: black;
+  transition: 0.3s ease-in-out;
+}

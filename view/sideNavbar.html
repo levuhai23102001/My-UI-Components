@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Navigation Bar for Dashboard</title>
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/sideNavbar.css" />
+  </head>
+  <body>
+    <nav class="sideNav">
+      <div class="sideNav-header">
+        <a href="#" class="navbar-brand">
+          <i class="bx bxs-pyramid"></i>
+          <div class="navbar-brand__name">M1LKY</div>
+        </a>
+        <div class="menu-btn">
+          <i class="bx bx-menu"></i>
+          <!-- <div class="menu-btn__hambergur">
+          </div> -->
+        </div>
+      </div>
+      <div class="sideNav-content">
+        <ul class="navbar-list">
+          <li class="navbar-list-item active">
+            <a href="#" class="list-item__link">
+              <i class="bx bx-border-all"></i>
+              <span class="link-name">Dashboard</span>
+            </a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="list-item__link">
+              <i class="bx bx-layer"></i>
+              <span class="link-name">Analystics</span>
+            </a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="list-item__link">
+              <i class="bx bx-user"></i>
+              <span class="link-name">Users</span>
+            </a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="list-item__link">
+              <i class="bx bx-receipt"></i>
+              <span class="link-name">Orders</span>
+            </a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="list-item__link">
+              <i class="bx bx-cog"></i>
+              <span class="link-name">Settings</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="sideNav-footer">
+        <div class="profile">
+          <div class="profile-content">
+            <img src="/img/avatar_1.png" alt="profile" class="profile-img" />
+            <div class="profile-name">M1LKY</div>
+          </div>
+          <div class="logout-btn">
+            <i class="bx bx-log-out"></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <script src="/js/sideNavbar.js"></script>
+  </body>
+</html>

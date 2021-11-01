@@ -165,6 +165,7 @@ a {
   padding: 10px 15px;
   color: var(--font-color);
   width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .sideNav .sideNav-footer .profile {
@@ -216,9 +217,4 @@ a {
   opacity: 1;
   pointer-events: auto;
   transition: 0.4s ease-in-out;
-}
-.sideNav-footer:hover .profile {
-  background: whitesmoke;
-  color: black;
-  transition: 0.3s ease-in-out;
 }

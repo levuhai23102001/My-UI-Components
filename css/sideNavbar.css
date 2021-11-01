@@ -60,11 +60,13 @@ a {
   color: var(--font-color);
   opacity: 0;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .sideNav.active .sideNav-header .navbar-brand {
   opacity: 1;
   transition: 0.3s ease-in-out;
+  pointer-events: auto;
 }
 
 .sideNav-header .navbar-brand i {
@@ -142,7 +144,6 @@ a {
   .link-name {
   opacity: 0;
   pointer-events: none;
-  transition: 0.3s ease-in-out;
 }
 
 .sideNav.active
@@ -152,7 +153,7 @@ a {
   .list-item__link
   .link-name {
   opacity: 1;
-  transition: 0.3s ease-in-out;
+  transition: 0.4s ease-in-out;
   pointer-events: auto;
 }
 
@@ -186,6 +187,7 @@ a {
   width: 50px;
   border-radius: 12px;
   object-fit: cover;
+  cursor: pointer;
 }
 
 .profile .profile-content .profile-name {
@@ -193,6 +195,7 @@ a {
   font-weight: 400;
   letter-spacing: 1px;
   opacity: 0;
+  pointer-events: none;
 }
 
 .profile .logout-btn {
@@ -204,11 +207,14 @@ a {
   cursor: pointer;
   opacity: 0;
   transition: 0.3s ease-in-out;
+  pointer-events: none;
 }
 
 .sideNav.active .profile .profile-content .profile-name,
 .sideNav.active .profile .logout-btn {
   opacity: 1;
+  pointer-events: auto;
+  transition: 0.4s ease-in-out;
 }
 .sideNav-footer:hover .profile {
   background: whitesmoke;

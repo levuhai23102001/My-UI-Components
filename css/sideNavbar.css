@@ -113,7 +113,6 @@ a {
   align-items: center;
   font-size: 18px;
   border-radius: 12px;
-  transition: 0.3s ease-in-out;
 }
 
 .sideNav .sideNav-content ul .navbar-list-item.active a {

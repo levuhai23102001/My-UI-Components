@@ -1,0 +1,175 @@
+@import url("http://fonts.cdnfonts.com/css/alphacentauri");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-size-body: 16px;
+  --fav-color: #ff3377;
+  --font-color: whitesmoke;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--font-size-body);
+  /* min-height: 100vh; */
+  /* background-color: #ffcfdf; */
+  background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+}
+
+ul,
+li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.header-logo {
+  font-family: "AlphaCentauri", sans-serif;
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+}
+
+.header-menu .menu-item {
+  padding: 15px 20px;
+}
+
+.menu-item .menu-item__link {
+  font-weight: 400;
+  color: rgb(0, 0, 0, 0.8);
+  transition: all 0.2s ease-in-out;
+}
+
+.header-menu .menu-item:hover .menu-item__link {
+  color: var(--fav-color);
+  transition: all 0.2s ease-in-out;
+}
+
+.header-auth {
+  display: flex;
+  align-items: center;
+  gap: 0 30px;
+  text-transform: capitalize;
+}
+
+.sign-in {
+  font-weight: 500;
+  color: black;
+}
+
+.sign-up {
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10rem;
+  border: 1px solid;
+  color: #ff3377;
+}
+
+.menu-toggle {
+  position: relative;
+  display: none;
+  width: 35px;
+  height: 35px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 4px;
+  pointer-events: none;
+  z-index: 99;
+}
+
+.menu-toggle .btn--hamburger {
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.menu-toggle .btn--hamburger::before,
+.menu-toggle .btn--hamburger::after {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 3px;
+  background-color: black;
+  border-radius: 2px;
+}
+
+.menu-toggle .btn--hamburger::before {
+  transform: translateY(9px);
+}
+
+.menu-toggle .btn--hamburger::after {
+  transform: translateY(18px);
+}
+@media screen and (min-width: 768px) {
+  .menu-item--auth {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
+  .header-container {
+    padding: 20px 0 40px;
+  }
+  .header-auth {
+    display: none;
+  }
+  .header-menu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: whitesmoke;
+    width: 300px;
+    z-index: 10;
+    border-left: 1px solid rgb(206, 206, 206);
+    flex-direction: column;
+    gap: 15px 0;
+    padding-top: 50px;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: all 0.2s linear;
+  }
+  .header-menu.show {
+    transform: translateX(0);
+  }
+  .menu-item.menu-item--auth {
+    display: flex;
+    align-items: center;
+    gap: 0 15px;
+  }
+  .menu-toggle {
+    display: block;
+    pointer-events: auto;
+  }
+}
